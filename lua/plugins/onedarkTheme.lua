@@ -1,8 +1,17 @@
 vim.opt.termguicolors = true
 -- 主题设置
 require('onedark').setup({
+	style = 'cool',
 	transparent = false,
-	style = 'cool'
+
+	code_style = {
+		comments = 'italic',
+		keywords = 'none', -- this do not work for some key words like int
+		functions = 'none',
+		strings = 'none',
+		variables = 'none'
+	}
+
 })
 
 require('onedark').load()
