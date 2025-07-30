@@ -22,7 +22,6 @@ vim.opt.inccommand = ''
 -- 禁用响铃（声音和视觉）
 vim.o.errorbells = false
 vim.o.visualbell = true
-vim.o.t_vb = ''  
 
 -- 启用鼠标
 vim.opt.mouse:append('a')

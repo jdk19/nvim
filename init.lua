@@ -15,6 +15,8 @@ Plug ('navarasu/onedark.nvim')
 
 Plug ('nvim-treesitter/nvim-treesitter')
 
+Plug ('neoclide/coc.nvim', {['branch'] = 'release'})
+
 vim.call('plug#end')
 
 require("core.options")
@@ -23,3 +25,5 @@ require("core.usercmds")
 require("core.mappings")
 
 require("plugins.onedarkTheme")
+require("plugins.coc")
+require("plugins.treesitter")
