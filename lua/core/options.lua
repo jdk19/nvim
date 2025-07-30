@@ -30,3 +30,7 @@ vim.opt.mouse:append('a')
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
+
+-- bater indent
+vim.opt.autoindent = true
+vim.opt.smartcase = true
