@@ -11,11 +11,18 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 
+-- theme
 Plug ('navarasu/onedark.nvim')
 
+-- better color
 Plug ('nvim-treesitter/nvim-treesitter')
 
+-- compitition and others
 Plug ('neoclide/coc.nvim', {['branch'] = 'release'})
+
+Plug ('nvim-lualine/lualine.nvim')
+-- If you want to have icons in your statusline choose one of these
+Plug ('nvim-tree/nvim-web-devicons')
 
 vim.call('plug#end')
 
@@ -25,5 +32,6 @@ require("core.usercmds")
 require("core.mappings")
 
 require("plugins.onedarkTheme")
-require("plugins.coc")
 require("plugins.treesitter")
+require("plugins.coc")
+require("plugins.lualine");
