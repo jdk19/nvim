@@ -24,14 +24,19 @@ Plug ('nvim-lualine/lualine.nvim')
 -- If you want to have icons in your statusline choose one of these
 Plug ('nvim-tree/nvim-web-devicons')
 
+-- for markdown
+Plug ('iamcco/markdown-preview.nvim', { ['do'] = ' mkdp#util#install() ', ['for'] = 'markdown' })
+Plug ('dhruvasagar/vim-table-mode')
+
 vim.call('plug#end')
 
-require("core.options")
-require("core.autocmds")
-require("core.usercmds")
-require("core.mappings")
+require('core.options')
+require('core.autocmds')
+require('core.usercmds')
+require('core.mappings')
 
-require("plugins.onedarkTheme")
-require("plugins.treesitter")
-require("plugins.coc")
-require("plugins.lualine");
+require('plugins.onedarkTheme')
+require('plugins.treesitter')
+require('plugins.coc')
+require('plugins.lualine');
+require('plugins.markdown-preview');
