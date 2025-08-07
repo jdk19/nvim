@@ -30,4 +30,14 @@ vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
 
 -- vim-table-mode
-vim.keymap.set('', '<leader>tm', 'TableModeToggle')
+vim.keymap.set('n', '<leader>tm', 'TableModeToggle')
+
+-- markdown preview
+vim.keymap.set('n', '<leader>mp', '<CMD>MarkdownPreview<CR>')
+
+-- tags
+vim.keymap.set('n', '<F8>', '<CMD>TagbarToggle<CR>')
+
+-- nvim-tree
+-- 打开/关闭切换
+vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })

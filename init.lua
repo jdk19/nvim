@@ -28,6 +28,13 @@ Plug ('nvim-tree/nvim-web-devicons')
 Plug ('iamcco/markdown-preview.nvim', { ['do'] = ' mkdp#util#install() ', ['for'] = 'markdown' })
 Plug ('dhruvasagar/vim-table-mode')
 
+-- tags
+Plug ('preservim/tagbar')
+
+Plug('nvim-tree/nvim-tree.lua') --file explorer
+
+Plug ('akinsho/toggleterm.nvim', { ['tag'] = '*'}) -- terminal
+
 vim.call('plug#end')
 
 require('core.options')
@@ -40,3 +47,5 @@ require('plugins.treesitter')
 require('plugins.coc')
 require('plugins.lualine');
 require('plugins.markdown-preview');
+require('plugins.nvim-tree')
+require('plugins.toggleterm')
