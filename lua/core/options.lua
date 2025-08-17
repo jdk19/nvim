@@ -34,3 +34,6 @@ vim.opt.softtabstop = 2
 -- bater indent
 vim.opt.autoindent = true
 vim.opt.smartcase = true
+
+vim.cmd('silent! w')   -- 保存但不显示提示
+vim.cmd('silent! wq')  -- 保存并退出，屏蔽提示

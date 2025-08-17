@@ -10,31 +10,23 @@ local vim = vim
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
-
--- theme
-Plug ('navarasu/onedark.nvim')
-
--- better color
-Plug ('nvim-treesitter/nvim-treesitter')
-
--- compitition and others
-Plug ('neoclide/coc.nvim', {['branch'] = 'release'})
-
+Plug ('navarasu/onedark.nvim') -- theme
+Plug ('nvim-treesitter/nvim-treesitter') -- better color
 Plug ('nvim-lualine/lualine.nvim')
 -- If you want to have icons in your statusline choose one of these
 Plug ('nvim-tree/nvim-web-devicons')
-
--- for markdown
-Plug ('iamcco/markdown-preview.nvim', { ['do'] = ' mkdp#util#install() ', ['for'] = 'markdown' })
+Plug ('iamcco/markdown-preview.nvim', 
+	{ ['do'] = ' mkdp#util#install() ', ['for'] = 'markdown' }) -- for markdown
 Plug ('dhruvasagar/vim-table-mode')
-
--- tags
-Plug ('preservim/tagbar')
-
+Plug ('preservim/tagbar') -- tags
 Plug('nvim-tree/nvim-tree.lua') --file explorer
-
 Plug ('akinsho/toggleterm.nvim', { ['tag'] = '*'}) -- terminal
-
+Plug('kylechui/nvim-surround')
+Plug 'saghen/blink.cmp' -- 补全
+Plug 'neovim/nvim-lspconfig' -- LSP
+-- LSP 安装管理工具
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 vim.call('plug#end')
 
 require('core.options')
@@ -44,8 +36,10 @@ require('core.mappings')
 
 require('plugins.onedarkTheme')
 require('plugins.treesitter')
-require('plugins.coc')
 require('plugins.lualine');
 require('plugins.markdown-preview');
 require('plugins.nvim-tree')
 require('plugins.toggleterm')
+require('plugins.mason')
+require('plugins.lsp')
+require('plugins.blinkcmp')

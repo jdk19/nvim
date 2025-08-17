@@ -29,6 +29,9 @@ vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
 
+vim.keymap.set('n', 'gl', '$') --跳到行首
+vim.keymap.set('n', 'gh', '^') --跳到行尾 
+
 -- vim-table-mode
 vim.keymap.set('n', '<leader>tm', 'TableModeToggle')
 

@@ -7,3 +7,10 @@ vim.api.nvim_create_autocmd("InsertLeave", {
     end
   end,
 })
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+		pcall(vim.diagnostic.disable, 0)
+		vim.notify('')
+  end,
+})

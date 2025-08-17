@@ -9,7 +9,7 @@ require('nvim-treesitter.configs').setup({
   },
 
   indent = {
-    enable = true               -- 启用基于 treesitter 的智能缩进
+    enable = false -- 启用基于 treesitter 的智能缩进
   },
 
   incremental_selection = {

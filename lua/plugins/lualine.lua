@@ -19,7 +19,12 @@ local function filename_with_dot()
   if filename == '' then
     filename = '[No Name]'
   end
-  return filename .. ' ●'
+  if vim.bo.modified then
+		filename = filename .. ' '
+	else
+		filename = filename .. ' ●'
+	end
+	return filename
 end
 
 -- 动态颜色：根据是否修改
