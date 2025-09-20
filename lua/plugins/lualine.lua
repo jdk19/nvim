@@ -17,13 +17,8 @@ local diagnostics = {
 local function filename_with_dot()
   local filename = vim.fn.expand('%:t') -- 只取文件名
   if filename == '' then
-    filename = '[No Name]'
+    filename = 'No Name'
   end
-  if vim.bo.modified then
-		filename = filename .. ' '
-	else
-		filename = filename .. ' ●'
-	end
 	return filename
 end
 

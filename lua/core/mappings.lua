@@ -44,3 +44,9 @@ vim.keymap.set('n', '<F8>', '<CMD>TagbarToggle<CR>')
 -- nvim-tree
 -- 打开/关闭切换
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+
+-- 切换 blink.cmp 补全
+vim.keymap.set("n", "<leader>tc", function()
+  vim.g.blink_cmp_enabled = not vim.g.blink_cmp_enabled
+  print("blink.cmp: " .. (vim.g.blink_cmp_enabled and "enabled" or "disabled"))
+end, { desc = "Toggle blink.cmp completion" })
