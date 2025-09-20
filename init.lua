@@ -27,6 +27,8 @@ Plug 'neovim/nvim-lspconfig' -- LSP
 -- LSP 安装管理工具
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
+-- Plug('MeanderingProgrammer/render-markdown.nvim') --render md inline
+Plug ('echasnovski/mini.align')
 vim.call('plug#end')
 
 require('core.options')
@@ -43,3 +45,5 @@ require('plugins.toggleterm')
 require('plugins.mason')
 require('plugins.lsp')
 require('plugins.blinkcmp')
+require('plugins.surround')
+require('plugins.minialign')
